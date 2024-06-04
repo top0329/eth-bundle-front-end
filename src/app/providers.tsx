@@ -4,7 +4,10 @@ import { WagmiProvider, cookieToInitialState } from 'wagmi';
 import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
+import ToastProvider from '@/contexts/toastContext';
+import SpinnerProvider from '@/contexts/spinnerContext';
 import { config } from '@/lib/config';
+import { Web3Provider } from '@/contexts/web3Context';
 
 const queryClient = new QueryClient();
 
@@ -28,7 +31,11 @@ export default function Providers({ children, cookie }: Props) {
             overlayBlur: 'small',
           })}
         >
-          {children}
+          <ToastProvider>
+            <SpinnerProvider>
+              <Web3Provider>{children}</Web3Provider>
+            </SpinnerProvider>
+          </ToastProvider>
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
