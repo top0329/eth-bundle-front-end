@@ -31,8 +31,9 @@ function CreateNewTokenPage() {
           .createToken(
             tokenValue.tokenName,
             tokenValue.tokenSymbol,
+            tokenValue.totalSupply,
             tokenValue.decimal,
-            tokenValue.totalSupply
+            account
           )
           .send({ from: account });
       } else showToast('warning', 'Please connect wallet!');
