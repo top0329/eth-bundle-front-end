@@ -44,11 +44,31 @@
   },
   {
     "inputs": [
-      { "internalType": "string", "name": "_name", "type": "string" },
-      { "internalType": "string", "name": "_symbol", "type": "string" },
-      { "internalType": "uint256", "name": "_totalSupply", "type": "uint256" },
-      { "internalType": "uint8", "name": "_decimals", "type": "uint8" },
-      { "internalType": "address", "name": "creator", "type": "address" }
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_symbol",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_totalSupply",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint8",
+        "name": "_decimals",
+        "type": "uint8"
+      },
+      {
+        "internalType": "address",
+        "name": "creator",
+        "type": "address"
+      }
     ],
     "name": "createToken",
     "outputs": [],
@@ -58,7 +78,13 @@
   {
     "inputs": [],
     "name": "devTokenContractAddress",
-    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   }
