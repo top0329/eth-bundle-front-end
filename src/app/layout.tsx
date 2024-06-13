@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>
+        <Providers cookie={cookie}>
           <div
             style={{
               display: 'flex',
